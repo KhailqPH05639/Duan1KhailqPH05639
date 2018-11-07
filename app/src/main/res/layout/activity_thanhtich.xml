@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThanhtichActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:contentScrim="#5cfafa"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thanhtich" />
+
+                <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/float_bt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:src="@drawable/ic_thumb_up_black_24dp" />-->
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/btnback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:text="Team achievements"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="5dp"
+                android:text="Siêu kỷ lục cho Real
+Khi bước tới Kiev, Real đã trở thành CLB đầu tiên dự 3 trận
+ chung kết Cúp C1/Champions League
+liên tiếp kể từ khi Juventus làm được điều này trong khoảng các
+ năm 1996-1998. Khi cuộc chiến kết thúc,
+
+
+2013/14Real Madrid
+2012/13Bayern
+2011/12Chelsea
+2010/11Barcelona
+2009/10Inter
+2008/09Barcelona
+"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Real đã trở thành CLB đầu tiên trong lịch sử giải đấu
+ vô địch 3 lần liên tiếp
+ Sau trường hợp Bayern lên ngôi
+ liên tiếp vào các mùa 1973/74, 1974/75 và 1975/76 1976/77."
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+BẢNG VÀNG CHAMPIONS LEAGUE 10 NĂM GẦN ĐÂY
+MùaVô địch
+2017/18Real Madrid
+2016/17Real Madrid
+2015/16Real Madrid
+2014/15Barcelona"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

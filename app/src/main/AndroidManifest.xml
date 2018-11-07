@@ -9,14 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".HelloActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".GioithieuActivity" />
+        <activity android:name=".DanhsachActivity" />
+        <activity android:name=".LineaActivity" />
+        <activity android:name=".LinebActivity" />
+        <activity android:name=".ThanhtichActivity" />
+        <activity android:name=".ThongkeActivity"></activity>
     </application>
 
 </manifest>

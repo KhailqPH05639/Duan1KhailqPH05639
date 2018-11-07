@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_chucvu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Position"
+            android:textSize="24dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="18dp" />
+
+        <TextView
+            android:inputType="number"
+            android:id="@+id/tv_tuoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shirt Number"
+            android:textSize="18dp" />
+
+        <TextView
+            android:inputType="number"
+            android:id="@+id/tv_namsinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Only"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/img_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_close" />
+</android.support.v7.widget.CardView>

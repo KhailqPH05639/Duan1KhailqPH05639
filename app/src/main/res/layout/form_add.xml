@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/ed_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:inputType="number"
+        android:paddingLeft="10dp" />
+    <EditText
+        android:id="@+id/ed_chucvu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Position"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/ed_ten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/ed_tuoi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:inputType="number"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:inputType="date"
+        android:id="@+id/ed_namsinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Year of Birth"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/ed_luong"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Salary"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/ed_gioitinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gender"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/ed_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Status"
+
+        android:paddingLeft="10dp" />
+
+    <EditText
+
+        android:id="@+id/ed_quoctich"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="National"
+        android:paddingLeft="10dp" />
+
+
+</LinearLayout>
