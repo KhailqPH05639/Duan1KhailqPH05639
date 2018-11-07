@@ -16,8 +16,7 @@
             android:textAlignment="center"
             app:contentScrim="#5cfafa"
 
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-           >
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -27,17 +26,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/intro" />
+                    android:src="@drawable/annh" />
 
                 <!--<android.support.design.widget.FloatingActionButton-->
-                    <!--android:id="@+id/float_bt"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_alignParentBottom="true"-->
-                    <!--android:layout_alignParentRight="true"-->
-                    <!--android:layout_marginBottom="20dp"-->
-                    <!--android:layout_marginRight="20dp"-->
-                    <!--android:src="@drawable/ic_thumb_up_black_24dp" />-->
+                <!--android:id="@+id/float_bt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:src="@drawable/ic_thumb_up_black_24dp" />-->
             </RelativeLayout>
 
 
@@ -47,17 +46,18 @@
                 app:layout_collapseMode="pin">
 
                 <ImageView
+                    android:id="@+id/btnback"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_back"
-                  android:id="@+id/btnback"/>
+                    android:src="@drawable/ic_back" />
+
                 <TextView
+                    style="@style/Base.TextAppearance.AppCompat.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="90dp"
                     android:text="Introduce"
-                    android:textSize="18sp"
-                    android:layout_marginLeft="90dp"
-                    android:textColor="#ffffff"/>
+                    android:textColor="#ffffff" />
             </android.support.v7.widget.Toolbar>
 
 
@@ -73,16 +73,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="Roboto-Regular.ttf"
             android:orientation="vertical">
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:fontFamily="Roboto-Regular.ttf"
                 android:paddingBottom="5dp"
-                android:text="Real Madrid Club de Fútbol (Câu lạc bộ Bóng đá Real Madrid), thường được gọi là Real Madrid hay gọi đơn giản là Real, là một câu lạc bộ bóng đá chuyên nghiệp tại Madrid, Tây Ban Nha. Đội bóng mặc màu áo trắng truyền thống từ khi được thành lập vào ngày 6 tháng 3 năm 1902 với tên gọi Câu lạc bộ Bóng đá Madrid. Từ Real (Hoàng gia) và đã được vua Alfonso XIII phong cho câu lạc bộ vào năm 1920 cùng chiếc vương miện trong logo của đội. Câu lạc bộ đã trở thành một thế lực lớn trên đấu trường trong nước và châu Âu từ những năm 1950."
-                android:textColor="#000"
-                android:textSize="18sp" />
+                android:text="@string/intro_1"
+                android:textColor="#000" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -108,8 +111,7 @@
                 android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
                 android:text="Cùng với Athletic Bilbao và Barcelona, Real Madrid là một trong ba đội bóng chưa bao giờ bị xuống hạng ở giải đấu hạng nhất Tây Ban Nha. Ở đấu trường quốc nội, câu lạc bộ đã giành được kỉ lục 33 chức vô địch La Liga, 19 Cúp Nhà vua Tây Ban Nha, 10 Siêu cúp Tây Ban Nha, 1 Copa Eva Duarte và 1 Copa de la Liga.[8] Ở đấu trường quốc tế, Real Madrid lập kỉ lục 13 danh hiệu European Cup/UEFA Champions League, đồng kỉ lục với 3 Cúp liên lục địa, 2 Cúp UEFA Europa League, 4 Siêu cúp châu Âu và 3 FIFA Club World Cup."
-                android:textColor="#000"
-                android:textSize="18sp" />
+                android:textColor="#000" />
 
 
             <TextView
@@ -120,7 +122,6 @@
                 android:text="Năm 2017, Real Madrid đã lập nên cột mốc mới trong lịch sử khi giành chiến thắng trước Juventus với tỉ số 4-1 trong trận chung kết C1 để trở thành đội bóng đầu tiên bảo vệ thành công chức vô địch UEFA Champions League. Năm 2018, Real Madrid lại tiếp tục thiết lập nên cột mốc mới trong lịch sử UEFA Champions League khi giành chiến thắng trước Liverpool với tỉ số 3-1 trong trận chung kết với cú đúp của Gareth Bale tái hiện lại cú vô lê tuyệt đẹp của chính HLV đương nhiệm Zidane vào lưới Bayer Leverkusen năm 2002 và bàn còn lại của Karim Benzema, để trở thành đội bóng đầu tiên giành chức vô địch 3 lần trong 3 trận chung kết cúp châu Âu liên tiếp trong kỷ nguyên Champions League."
                 android:textColor="#000"
                 android:textSize="18sp" />
-
 
 
             <TextView
