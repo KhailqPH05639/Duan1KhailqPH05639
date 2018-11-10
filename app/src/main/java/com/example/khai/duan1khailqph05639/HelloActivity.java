@@ -23,6 +23,6 @@ public class HelloActivity extends AppCompatActivity {
                 // kết thúc màn hình chào
                 finish();
             }
-        },2000);
+        },1500);
     }
 }

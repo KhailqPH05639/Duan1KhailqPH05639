@@ -25,7 +25,8 @@
 
 
             <TextView
-
+                android:fontFamily="Roboto-Regular.ttf"
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -70,10 +71,10 @@
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="create_Employee"
+            android:id="@+id/float_them_danhsach"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:backgroundTint="#39bcef"
+            android:backgroundTint="#12A6E0"
             android:layout_margin="25dp"
             android:src="@drawable/ic_add" />
     </RelativeLayout>

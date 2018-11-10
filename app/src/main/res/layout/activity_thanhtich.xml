@@ -51,13 +51,14 @@
                     android:src="@drawable/ic_back" />
 
                 <TextView
-
+                    android:fontFamily="Roboto-Regular.ttf"
+                    style="@style/Base.TextAppearance.AppCompat.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dp"
+                    android:layout_marginLeft="85dp"
                     android:text="Team achievements"
                     android:textColor="#ffffff"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
             </android.support.v7.widget.Toolbar>
 
 
@@ -71,63 +72,65 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
+            android:layout_margin="16dp"
+            android:fontFamily="Roboto-Regular.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
-                android:text="Siêu kỷ lục cho Real
-Khi bước tới Kiev, Real đã trở thành CLB đầu tiên dự 3 trận
- chung kết Cúp C1/Champions League
-liên tiếp kể từ khi Juventus làm được điều này trong khoảng các
- năm 1996-1998. Khi cuộc chiến kết thúc,
-
-
-2013/14Real Madrid
-2012/13Bayern
-2011/12Chelsea
-2010/11Barcelona
-2009/10Inter
-2008/09Barcelona
-"
+                android:text="@string/tt1"
                 android:textColor="#000"
-                android:textSize="18sp" />
-
+                 />
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=" Real đã trở thành CLB đầu tiên trong lịch sử giải đấu
- vô địch 3 lần liên tiếp
- Sau trường hợp Bayern lên ngôi
- liên tiếp vào các mùa 1973/74, 1974/75 và 1975/76 1976/77."
+                android:layout_marginTop="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/tt1"
                 android:textColor="#000"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
+                />
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="
-BẢNG VÀNG CHAMPIONS LEAGUE 10 NĂM GẦN ĐÂY
-MùaVô địch
-2017/18Real Madrid
-2016/17Real Madrid
-2015/16Real Madrid
-2014/15Barcelona"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/tt1"
                 android:textColor="#000"
-                android:textAlignment="center"
-                android:textSize="20sp" />
+                />
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tt2"
+                android:textColor="#000"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tt3"
+                android:textColor="#000"
+                android:textAlignment="center"
+                />
+
+            <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="***"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

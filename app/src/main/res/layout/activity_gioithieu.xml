@@ -24,9 +24,9 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="283dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/annh" />
+                    android:src="@drawable/gioithieu" />
 
                 <!--<android.support.design.widget.FloatingActionButton-->
                 <!--android:id="@+id/float_bt"-->
@@ -52,11 +52,13 @@
                     android:src="@drawable/ic_back" />
 
                 <TextView
+                    android:fontFamily="Roboto-Regular.ttf"
                     style="@style/Base.TextAppearance.AppCompat.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="90dp"
+                    android:layout_marginLeft="110dp"
                     android:text="Introduce"
+                    android:textSize="20sp"
                     android:textColor="#ffffff" />
             </android.support.v7.widget.Toolbar>
 
@@ -88,48 +90,53 @@
                 android:textColor="#000" />
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
-                android:text="Real Madrid được bình chọn là đội bóng vĩ đại nhất thế kỷ XX. CLB hiện đang giữ kỷ lục với 13 danh hiệu European Cup/UEFA Champions League. Không giống như hầu hết các câu lạc bộ bóng đá khác ở châu Âu, những thành viên của Real Madrid (thường được gọi là socios) đã sở hữu và điều hành đội bóng từ khi thành lập. Câu lạc bộ có giá trị ước tính khoảng 3,24 tỉ € (khoảng 3,65 tỉ $) vào năm 2015 và tính tới mùa giải 2014-2015 là câu lạc bộ thương mại thành công nhất với lợi nhuận đạt 577 triệu €.[4][5][6] Real Madrid cũng là một trong những câu lạc bộ bóng đá có số lượng người hâm mộ đông đảo nhất thế giới."
+                android:text="@string/intro2"
                 android:textColor="#000"
-                android:textSize="18sp" />
+               />
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
-                android:text="Real Madrid có nhiều kình địch, nổi bật nhất là Barcelona cùng những trận El Clásico (Siêu kinh điển) giữa 2 đội. Sân nhà của đội từ năm 1947 là Sân vận động Santiago Bernabéu tại quận Chamartín, trung tâm thành phố Madrid. Sân được khánh thành ngày 14 tháng 12 năm 1947 với sức chứa hiện nay là 85.454 khán giả và kích thước đường chạy là 106x72 mét."
+                android:text="@string/intro3"
                 android:textColor="#000"
-                android:textSize="18sp" />
+               />
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
-                android:text="Cùng với Athletic Bilbao và Barcelona, Real Madrid là một trong ba đội bóng chưa bao giờ bị xuống hạng ở giải đấu hạng nhất Tây Ban Nha. Ở đấu trường quốc nội, câu lạc bộ đã giành được kỉ lục 33 chức vô địch La Liga, 19 Cúp Nhà vua Tây Ban Nha, 10 Siêu cúp Tây Ban Nha, 1 Copa Eva Duarte và 1 Copa de la Liga.[8] Ở đấu trường quốc tế, Real Madrid lập kỉ lục 13 danh hiệu European Cup/UEFA Champions League, đồng kỉ lục với 3 Cúp liên lục địa, 2 Cúp UEFA Europa League, 4 Siêu cúp châu Âu và 3 FIFA Club World Cup."
+                android:text="@string/intr4"
                 android:textColor="#000" />
 
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
-                android:text="Năm 2017, Real Madrid đã lập nên cột mốc mới trong lịch sử khi giành chiến thắng trước Juventus với tỉ số 4-1 trong trận chung kết C1 để trở thành đội bóng đầu tiên bảo vệ thành công chức vô địch UEFA Champions League. Năm 2018, Real Madrid lại tiếp tục thiết lập nên cột mốc mới trong lịch sử UEFA Champions League khi giành chiến thắng trước Liverpool với tỉ số 3-1 trong trận chung kết với cú đúp của Gareth Bale tái hiện lại cú vô lê tuyệt đẹp của chính HLV đương nhiệm Zidane vào lưới Bayer Leverkusen năm 2002 và bàn còn lại của Karim Benzema, để trở thành đội bóng đầu tiên giành chức vô địch 3 lần trong 3 trận chung kết cúp châu Âu liên tiếp trong kỷ nguyên Champions League."
+                android:text="@string/int5"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                />
 
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="***"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

@@ -20,7 +20,8 @@
             <TextView
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
-
+                android:fontFamily="Roboto-Regular.ttf"
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_centerInParent="true"
                 android:text="Hello"
                 android:textColor="#fafaf9"
@@ -31,10 +32,10 @@
 
     <ImageView
         android:id="@+id/imgphuongnam"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/helogo"
+        android:src="@drawable/logo"
         android:layout_width="350dp"
         android:layout_height="400dp" />
 

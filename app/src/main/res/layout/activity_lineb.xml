@@ -25,6 +25,8 @@
 
 
             <TextView
+                android:fontFamily="Roboto-Regular.ttf"
+                style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -47,13 +49,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="14dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="LINE A (B)"
-                android:textColor="#FFF"
-                android:textSize="18sp" />
+
         </RelativeLayout>
 
 
@@ -68,7 +64,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_margin="25dp"
-            android:backgroundTint="#39bcef"
+            android:backgroundTint="#12A6E0"
             android:onClick="create_Employee"
             android:src="@drawable/ic_add" />
     </RelativeLayout>

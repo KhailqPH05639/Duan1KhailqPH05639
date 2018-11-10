@@ -3,29 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
     android:padding="5dp">
 
     <LinearLayout
+        android:fontFamily="Roboto-Regular.ttf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ID"
-            android:textSize="24dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_chucvu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Position"
-            android:textSize="24dp"
+            android:textSize="18sp"
             />
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_ten"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,6 +38,7 @@
             android:textSize="18dp" />
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:inputType="number"
             android:id="@+id/tv_tuoi"
             android:layout_width="match_parent"
@@ -41,6 +47,7 @@
             android:textSize="18dp" />
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:inputType="number"
             android:id="@+id/tv_namsinh"
             android:layout_width="match_parent"

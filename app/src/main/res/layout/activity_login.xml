@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
-
+                android:fontFamily="Roboto-Regular.ttf"
                 android:layout_centerInParent="true"
                 android:text="Login"
                 android:textColor="#fafaf3"
@@ -31,12 +31,19 @@
         </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
+
         android:orientation="vertical">
 
         <ImageView
@@ -65,7 +72,7 @@
                 android:imeOptions="actionNext"
                 android:paddingTop="10dp"
                 android:text="lequangkhai@gmail.com"
-                android:textSize="15dp" />
+                android:textSize="16sp" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -91,67 +98,33 @@
         </android.support.design.widget.TextInputLayout>
 
 
+
     </LinearLayout>
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="360dp"
-        android:layout_height="match_parent"
+  <CheckBox
+      android:fontFamily="Roboto-Regular.ttf"
+      style="@style/Base.TextAppearance.AppCompat.Small"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/linearLayout"
+      android:id="@+id/check"
+      android:textSize="16sp"
+      android:text="Remember Password ?"/>
+    <Button
+        android:fontFamily="Roboto-Regular.ttf"
+        style="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+       android:layout_below="@id/check"
+        android:layout_width="185dp"
+        android:layout_height="50dp"
+        android:text="LOGIN"
+        android:id="@+id/btnlogin"
+        android:textColor="#fff"
+        android:background="@drawable/buton"/>
 
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="158dp"
-            android:layout_height="56dp"
-
-            android:layout_alignParentBottom="true"
+        </RelativeLayout>
+    </ScrollView>
 
 
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="404dp"
-            android:text="Forget your password"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="154dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/buton"
-            android:text="LOGIN"
-            android:textColor="#f9f9f9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.412"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <TextView
-            android:layout_width="290dp"
-            android:layout_height="34dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:text="Don't have an account? Sign up"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.771"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-    </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

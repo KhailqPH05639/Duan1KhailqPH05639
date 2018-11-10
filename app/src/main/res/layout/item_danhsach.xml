@@ -3,36 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
     android:padding="5dp">
 
     <LinearLayout
+        android:fontFamily="Roboto-Regular.ttf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ID"
-            android:textSize="24dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_chucvu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Position"
-            android:textSize="24dp"
+            android:textSize="18sp"
              />
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_ten"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_tuoi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,20 +46,23 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/tv_namsinh"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:id="@+id/tv_ngaysinh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Year of Birth"
             android:textSize="18dp" />
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_luong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Salary"
-            android:textSize="24dp"
+            android:textSize="18sp"
              />
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_gioitinh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,13 +70,15 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/tv_status"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:id="@+id/tv_tinhtrang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Status"
             android:textSize="18dp" />
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_quoctich"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

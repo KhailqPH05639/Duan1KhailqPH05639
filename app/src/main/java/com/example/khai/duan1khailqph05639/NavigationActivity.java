@@ -67,6 +67,15 @@ public class NavigationActivity extends AppCompatActivity
             startActivity( intent );
             return true;
         }
+        if (id == R.id.action_exit) {
+
+            startActivity(new Intent(getApplicationContext(),NavigationActivity.class));
+            Intent startMain = new Intent(Intent.ACTION_MAIN);
+            startMain.addCategory(Intent.CATEGORY_HOME);
+            startActivity(startMain);
+            finish();
+            return true;
+        }
 
         return super.onOptionsItemSelected( item );
     }
