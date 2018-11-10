@@ -1,30 +1,28 @@
 package com.example.khai.duan1khailqph05639.model;
 
 public class LineAB {
-    String vitri,ten;
-    int id,soao,chiso;
+    String id,vitri,ten;
+    int soao,chiso;
 
-    public LineAB(int id) {
+    public LineAB(String id, String vitri, String ten, int soao, int chiso) {
         this.id = id;
-    }
-
-    public LineAB(String vitri, String ten, int soao, int chiso) {
         this.vitri = vitri;
         this.ten = ten;
         this.soao = soao;
         this.chiso = chiso;
-
     }
 
     public LineAB() {
 
     }
 
-    public int getId() {
+
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -60,3 +58,5 @@ public class LineAB {
         this.chiso = chiso;
     }
 }
+
+

@@ -73,6 +73,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/float_them_danhsach"
             android:layout_alignParentRight="true"
+            android:onClick="showDialog"
             android:layout_alignParentBottom="true"
             android:backgroundTint="#12A6E0"
             android:layout_margin="25dp"

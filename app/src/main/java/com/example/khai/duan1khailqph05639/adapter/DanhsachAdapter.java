@@ -52,16 +52,17 @@ public class DanhsachAdapter extends BaseAdapter {
     public class ViewHoler {
 
         ImageView img_delete;
-        TextView tv_chucvu, tv_ten, tv_tuoi, tv_ngaysinh, tv_luong, tv_gioitinh, tv_tinhtrang, tv_quoctich;
+        TextView tv_chucvu,tv_ID, tv_ten, tv_tuoi, tv_ngaysinh, tv_luong, tv_gioitinh, tv_tinhtrang, tv_quoctich;
 
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHoler holer;
         if (convertView == null) {
             holer = new ViewHoler();
             convertView = inflater.inflate( R.layout.item_danhsach, null );
+            holer.tv_ID=convertView.findViewById( R.id.tv_id );
             holer.img_delete = convertView.findViewById( R.id.img_delete );
             holer.tv_chucvu = convertView.findViewById( R.id.tv_chucvu );
             holer.tv_ten = convertView.findViewById( R.id.tv_ten );
@@ -75,14 +76,17 @@ public class DanhsachAdapter extends BaseAdapter {
             holer.img_delete.setOnClickListener( new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText( context, "hyhy", Toast.LENGTH_SHORT ).show();
+                    danhsachDao.deleteDanhSachByID( arrDanhsach.get( position ).getId() );
+                    arrDanhsach.remove( position );
+                    notifyDataSetChanged();
                 }
             } );
             convertView.setTag( holer );
         } else
             holer = (ViewHoler) convertView.getTag();
         Danhsach _entry = arrDanhsach.get( position );
-        holer.img_delete.setImageResource( R.drawable.ic_close );
+        holer.tv_ID.setText( _entry.getId() );
+        holer.img_delete.setImageResource( R.drawable.cancel );
         holer.tv_chucvu.setText( _entry.getChucvu() );
         holer.tv_ten.setText( _entry.getTen() );
         holer.tv_tuoi.setText( _entry.getTuoi() + "" );

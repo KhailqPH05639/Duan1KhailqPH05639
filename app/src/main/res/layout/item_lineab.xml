@@ -22,7 +22,7 @@
             android:textStyle="bold" />
         <TextView
             style="@style/Base.TextAppearance.AppCompat.Small"
-            android:id="@+id/tv_chucvu"
+            android:id="@+id/tv_vitri"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Position"
@@ -40,7 +40,7 @@
         <TextView
             style="@style/Base.TextAppearance.AppCompat.Small"
             android:inputType="number"
-            android:id="@+id/tv_tuoi"
+            android:id="@+id/tv_soao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Shirt Number"
@@ -49,7 +49,7 @@
         <TextView
             style="@style/Base.TextAppearance.AppCompat.Small"
             android:inputType="number"
-            android:id="@+id/tv_namsinh"
+            android:id="@+id/tv_chiso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Only"
@@ -58,12 +58,14 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/img_delete"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:paddingBottom="10dp"
+
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_close" />
+        android:src="@drawable/cancel" />
 </android.support.v7.widget.CardView>

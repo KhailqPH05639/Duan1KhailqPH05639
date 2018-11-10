@@ -20,7 +20,7 @@ public class DanhsachDao {
     private SQLiteOpenHelper dbHelper;
 
     public static final String TABLE_NAME = "DanhSach";
-    public static final String SQL_DANHSACH = "CREATE TABLE DanhSach(id text primary, chucvu text, ten text, tuoi int, ngaysinh date, luong double, gioitinh text, tinhtrang text, quoctich text );";
+    public static final String SQL_DANHSACH = "CREATE TABLE DanhSach(id text primary key, chucvu text, ten text, tuoi int, ngaysinh date, luong double, gioitinh text, tinhtrang text, quoctich text );";
     public static final String TAG = "DanhSachDAO";
     SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd" );
 
@@ -100,90 +100,5 @@ public class DanhsachDao {
     }
 
 
-//    private SQLiteDatabase db;
-//    private DatabaseHelper dbHelper;
-//
-//    public static final String TABLE_NAME = "Danhsach";
-//    public static final String SQL_DANH_SACH = "CREATE TABLE Danhsach (id int primary key autoincrement,chucvu text, ten text, tuoi int, ngaysinh date,luong double, gioitinh text, tinhtrang text, quoctich text);";
-//    public static final String TAG = "DanhsachDao";
-//
-//    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//
-//    public DanhsachDao(Context context) {
-//        dbHelper = new DatabaseHelper(context);
-//        db = dbHelper.getWritableDatabase();
-//    }
-//
-//    public int insertDanhSach(Danhsach ds) {
-//        ContentValues values = new ContentValues();
-//        values.put("chucvu", ds.getChucvu());
-//        values.put("ten", ds.getTen());
-//        values.put("tuoi", ds.getTuoi());
-//
-//        values.put("ngaysinh", sdf.format(ds.getDate()));
-//        values.put("luong", ds.getLuong());
-//        values.put("gioitinh", ds.getGioitinh());
-//        values.put("tinhtrang", ds.getTinhtrang());
-//        values.put("quoctich", ds.getQuoctich());
-//        try {
-//            if (db.insert(TABLE_NAME, null, values) == -1) {
-//                return -1;
-//            }
-//        } catch (Exception ex) {
-//            Log.d(TAG, ex.toString());
-//        }
-//        return 1;
-//    }
-//
-//    public List<Danhsach> getAllThanhVien() throws ParseException {
-//        List<Danhsach> dsThanhVien = new ArrayList<>();
-//        Cursor c = db.query(TABLE_NAME, null, null, null, null, null, null);
-//        c.moveToFirst();
-//        while (c.isAfterLast() == false) {
-//            Danhsach ee = new Danhsach();
-//            ee.setId( Integer.parseInt( c.getString ( 0 ) ));
-//            ee.setChucvu(c.getString(1));
-//            ee.setTen( c.getString( 2 ) );
-//            ee.setTuoi(Integer.parseInt(c.getString  (3)));
-//
-//
-//            ee.setDate(sdf.parse(c.getString(4)));
-//            ee.setLuong( Double.parseDouble(  c.getString( 5 ) ));
-//            ee.setGioitinh(c.getString(6));
-//            ee.setTinhtrang( c.getString( 7 ) );
-//            ee.setQuoctich( c.getString( 8 ) );
-//            dsThanhVien.add(ee);
-//            Log.d("//=====", ee.toString());
-//            c.moveToNext();
-//        }
-//        c.close();
-//        return dsThanhVien;
-//    }
-//
-//    public int updateDanhsach(Danhsach ds) {
-//        ContentValues values = new ContentValues();
-//
-//        values.put("chucvu", ds.getChucvu());
-//        values.put("ten", ds.getTen());
-//        values.put("tuoi", ds.getTuoi());
-//
-//        values.put("ngaysinh", sdf.format(ds.getDate()));
-//        values.put("luong", ds.getLuong());
-//        values.put("gioitinh", ds.getGioitinh());
-//        values.put("tinhtrang", ds.getTinhtrang());
-//        values.put("quoctich", ds.getQuoctich());
-//        int result = db.update(TABLE_NAME, values, "id=?", new String[]{String.valueOf(  ds.getId())});
-//        if (result == 0) {
-//            return -1;
-//        }
-//        return 1;
-//    }
-//
-//    public int deleteDanhsachID(int id) {
-//        int result = db.delete(TABLE_NAME, "id=?", new String[]{String.valueOf(  id)});
-//        if (result == 0) {
-//            return -1;
-//        }
-//        return 1;
-//    }
+
 }

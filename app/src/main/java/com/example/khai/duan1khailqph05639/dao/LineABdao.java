@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.example.khai.duan1khailqph05639.database.DatabaseHelper;
@@ -15,83 +16,79 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LineABdao { private SQLiteDatabase db;
-    private DatabaseHelper dbHelper;
+public class LineABdao {
+    private SQLiteDatabase db;
+    private SQLiteOpenHelper dbHelper;
 
-    public static final String TABLE_NAME = "Danhsach";
-    public static final String SQL_LINE_AB = "CREATE TABLE Danhsach (id int primary key autoincrement,vitri text, ten text, soao int, chiso int);";
+    public static final String TABLE_NAME = "LineAB";
+    public static final String SQL_LINEAB = "create table LineAB (id text primary key, vitri text, ten text, soao int, chiso int);";
     public static final String TAG = "LineABdao";
 
 
-
     public LineABdao(Context context) {
-        dbHelper = new DatabaseHelper(context);
+        dbHelper = new DatabaseHelper( context );
         db = dbHelper.getWritableDatabase();
     }
 
-    public int insertLineAB(LineAB ds) {
+    public int insertLineAB(LineAB lineab) {
         ContentValues values = new ContentValues();
-        values.put("vitri", ds.getVitri());
-        values.put("ten", ds.getTen());
-        values.put("soao", ds.getSoao());
-        values.put("chiso", ds.getChiso());
-
+        values.put( "id", lineab.getId() );
+        values.put( "vitri", lineab.getVitri() );
+        values.put( "ten", lineab.getTen() );
+        values.put( "soao", lineab.getSoao() );
+        values.put( "chiso", lineab.getChiso() );
 
         try {
-            if (db.insert(TABLE_NAME, null, values) == -1) {
+            if (db.insert( TABLE_NAME, null, values ) == -1) {
                 return -1;
             }
         } catch (Exception ex) {
-            Log.d(TAG, ex.toString());
+            Log.d( TAG, ex.toString() );
         }
         return 1;
     }
 
-    public List<LineAB> getAllLineAB() throws ParseException {
-        List<LineAB> dsThanhVien = new ArrayList<>();
-        Cursor c = db.query(TABLE_NAME, null, null, null, null, null, null);
-        c.moveToFirst();
-        while (c.isAfterLast() == false) {
-            LineAB ee = new LineAB();
-            ee.setId( Integer.parseInt( c.getString( 0 ) ) );
-            ee.setVitri(c.getString(1));
-            ee.setTen( c.getString( 2 ) );
-            ee.setSoao( Integer.parseInt( c.getString ( 3 ) ));
-            ee.setChiso( Integer.parseInt( c.getString ( 4 ) ));
-
-
-
-
-
-            dsThanhVien.add(ee);
-            Log.d("//=====", ee.toString());
-            c.moveToNext();
-        }
-        c.close();
-        return dsThanhVien;
-    }
-
-    public int updateLineAB(LineAB ds) {
+    public int updateLineAB(LineAB lineab) {
         ContentValues values = new ContentValues();
-
-        values.put("vitri", ds.getVitri());
-        values.put("ten", ds.getTen());
-        values.put("soao", ds.getSoao());
-        values.put("chiso", ds.getChiso());
-
-
-        int result = db.update(TABLE_NAME, values, "id=?", new String[]{String.valueOf(  ds.getId())});
+        values.put( "id", lineab.getId() );
+        values.put( "vitri", lineab.getVitri() );
+        values.put( "ten", lineab.getTen() );
+        values.put( "soao", lineab.getSoao() );
+        values.put( "chiso", lineab.getChiso() );
+        int result = db.update( TABLE_NAME, values, "id=?", new String[]{lineab.getId()} );
         if (result == 0) {
             return -1;
         }
         return 1;
     }
 
-    public int deleteLineABID(int id) {
-        int result = db.delete(TABLE_NAME, "id=?", new String[]{String.valueOf(  id)});
+    public int deleteLineABByID(String id) {
+        int result = db.delete( TABLE_NAME, "id=?", new String[]{id} );
         if (result == 0) {
             return -1;
         }
         return 1;
     }
+
+    public List<LineAB> getAllLineAB()  {
+        List<LineAB> dsLineAB=new ArrayList<>( );
+        Cursor cursor=db.query( TABLE_NAME,null,null,null,null,null,null );
+        cursor.moveToFirst();
+        while (cursor.isAfterLast()==false){
+            LineAB ds=new LineAB(  );
+            ds.setId( cursor.getString( 0 ) );
+            ds.setVitri( cursor.getColumnName( 1 ) );
+            ds.setTen( cursor.getString( 2 ) );
+            ds.setSoao( Integer.parseInt( cursor.getString( 3 ) ) );
+            ds.setChiso( Integer.parseInt( cursor.getString( 4 ) ) );
+            dsLineAB.add( ds );
+            Log.d( "//====",ds.toString() );
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return dsLineAB;
+    }
+
+
+
 }
