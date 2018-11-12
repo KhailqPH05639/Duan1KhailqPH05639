@@ -25,11 +25,11 @@
 
 
             <TextView
-                android:fontFamily="Roboto-Regular.ttf"
                 style="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:fontFamily="Roboto-Regular.ttf"
                 android:text="Line A"
                 android:textColor="#fbfbf9"
                 android:textSize="20sp" />
@@ -37,20 +37,9 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginRight="14dp">
-
-
-        </RelativeLayout>
 
 
         <ListView
@@ -61,10 +50,10 @@
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:layout_margin="25dp"
-            android:backgroundTint="#12A6E0"
+            android:background="#000"
             android:onClick="showDialog"
             android:src="@drawable/ic_add" />
     </RelativeLayout>

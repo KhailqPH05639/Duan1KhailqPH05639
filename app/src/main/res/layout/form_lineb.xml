@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fontFamily="Roboto-Regular.ttf"
+    android:padding="20dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/ed_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:inputType="number"
+                android:paddingLeft="10dp" />
+            <EditText
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/ed_vitri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Position"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/ed_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/ed_soao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Shirt Number"
+                android:inputType="number"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:inputType="date"
+                android:id="@+id/ed_chiso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Only"
+                android:paddingLeft="10dp" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

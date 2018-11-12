@@ -27,7 +27,6 @@
         <activity android:name=".LineaActivity" />
         <activity android:name=".LinebActivity" />
         <activity android:name=".ThanhtichActivity" />
-        <activity android:name=".ThongkeActivity"></activity>
     </application>
 
 </manifest>

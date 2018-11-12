@@ -11,40 +11,39 @@ import android.widget.TextView;
 
 import com.example.khai.duan1khailqph05639.R;
 
-import com.example.khai.duan1khailqph05639.dao.LineABdao;
-
-import com.example.khai.duan1khailqph05639.model.LineAB;
+import com.example.khai.duan1khailqph05639.dao.LineBdao;
+import com.example.khai.duan1khailqph05639.model.LineB;
 
 import java.util.List;
 
-public class LineABadapter  extends BaseAdapter {
-    List<LineAB> arrLineAB;
+public class LineBAdapter extends BaseAdapter {
+    List<LineB> arrLineB;
     public Activity context;
     public LayoutInflater inflater;
-    LineABdao lineABdao;
+    LineBdao lineBdao;
 
 
-    public LineABadapter(Activity context, List<LineAB> arrLineAB) {
+    public LineBAdapter(Activity context, List<LineB> arrLineB) {
         super();
         this.context = context;
-        this.arrLineAB = arrLineAB;
+        this.arrLineB = arrLineB;
         this.inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
-        lineABdao = new LineABdao( context );
+        lineBdao = new LineBdao( context );
 
     }
 
-    public LineABadapter() {
+    public LineBAdapter() {
 
     }
 
     @Override
     public int getCount() {
-        return arrLineAB.size();
+        return arrLineB.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return arrLineAB.get( position );
+        return arrLineB.get( position );
     }
 
     @Override
@@ -55,18 +54,18 @@ public class LineABadapter  extends BaseAdapter {
     public class ViewHoler {
 
         ImageView img_delete;
-        TextView tv_id,tv_vitri,tv_ten,tv_soao,tv_chiso ;
+        TextView tv_id, tv_vitri, tv_ten, tv_soao, tv_chiso;
 
     }
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        LineABadapter.ViewHoler holer;
+        LineBAdapter.ViewHoler holer;
         if (convertView == null) {
-            holer = new ViewHoler();
-            convertView = inflater.inflate( R.layout.item_lineab, null );
-            holer.tv_id=convertView.findViewById( R.id.tv_id );
-            holer.tv_vitri=convertView.findViewById( R.id.tv_vitri );
+            holer = new LineBAdapter.ViewHoler();
+            convertView = inflater.inflate( R.layout.iteam_lineb, null );
+            holer.tv_id = convertView.findViewById( R.id.tv_id );
+            holer.tv_vitri = convertView.findViewById( R.id.tv_vitri );
             holer.tv_ten = convertView.findViewById( R.id.tv_ten );
             holer.tv_soao = convertView.findViewById( R.id.tv_soao );
             holer.tv_chiso = convertView.findViewById( R.id.tv_chiso );
@@ -75,21 +74,22 @@ public class LineABadapter  extends BaseAdapter {
             holer.img_delete.setOnClickListener( new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    lineABdao.deleteLineABByID( arrLineAB.get( position ).getId() );
-                    arrLineAB.remove( position );
+                    lineBdao.deleteLineBByID( arrLineB.get( position ).getId() );
+                    arrLineB.remove( position );
                     notifyDataSetChanged();
                 }
             } );
             convertView.setTag( holer );
         } else
-            holer = (LineABadapter.ViewHoler) convertView.getTag();
-        LineAB _entry = arrLineAB.get( position );
+            holer = (LineBAdapter.ViewHoler) convertView.getTag();
+        LineB _entry = arrLineB.get( position );
         holer.tv_id.setText( _entry.getId() );
-        holer.img_delete.setImageResource( R.drawable.cancel );
+
         holer.tv_vitri.setText(  "Position: "+_entry.getVitri() );
         holer.tv_ten.setText( "Name: "+ _entry.getTen() );
-        holer.tv_soao.setText(  "Shirt Number: "+_entry.getSoao() + "" );
+        holer.tv_soao.setText( "Shirt Number: "+ _entry.getSoao() + "" );
         holer.tv_chiso.setText( "Only: "+ _entry.getChiso() + "" );
+        holer.img_delete.setImageResource( R.drawable.cancel );
         return convertView;
     }
 
@@ -98,8 +98,8 @@ public class LineABadapter  extends BaseAdapter {
         super.notifyDataSetChanged();
     }
 
-    public void changeDataset(List<LineAB> items) {
-        this.arrLineAB = items;
+    public void changeDataset(List<LineB> items) {
+        this.arrLineB = items;
         notifyDataSetChanged();
     }
 

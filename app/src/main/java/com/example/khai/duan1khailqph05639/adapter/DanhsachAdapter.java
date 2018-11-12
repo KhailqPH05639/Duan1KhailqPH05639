@@ -86,15 +86,16 @@ public class DanhsachAdapter extends BaseAdapter {
             holer = (ViewHoler) convertView.getTag();
         Danhsach _entry = arrDanhsach.get( position );
         holer.tv_ID.setText( _entry.getId() );
+
+        holer.tv_chucvu.setText( "Position: "+_entry.getChucvu() );
+        holer.tv_ten.setText("Name: "+ _entry.getTen() );
+        holer.tv_tuoi.setText("Age: " +_entry.getTuoi() + "" );
+        holer.tv_ngaysinh.setText("Date: "+ sdf.format( _entry.getDate() ) );
+        holer.tv_luong.setText( "Salary: "+_entry.getLuong() + "" );
+        holer.tv_gioitinh.setText("Gender: " +_entry.getGioitinh() );
+        holer.tv_tinhtrang.setText("Status: " +_entry.getTinhtrang() );
+        holer.tv_quoctich.setText( "National: "+_entry.getQuoctich() );
         holer.img_delete.setImageResource( R.drawable.cancel );
-        holer.tv_chucvu.setText( _entry.getChucvu() );
-        holer.tv_ten.setText( _entry.getTen() );
-        holer.tv_tuoi.setText( _entry.getTuoi() + "" );
-        holer.tv_ngaysinh.setText( sdf.format( _entry.getDate() ) );
-        holer.tv_luong.setText( _entry.getLuong() + "" );
-        holer.tv_gioitinh.setText( _entry.getGioitinh() );
-        holer.tv_tinhtrang.setText( _entry.getTinhtrang() );
-        holer.tv_quoctich.setText( _entry.getQuoctich() );
         return convertView;
     }
 
