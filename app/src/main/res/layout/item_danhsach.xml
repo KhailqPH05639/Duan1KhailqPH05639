@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <TextView
             style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_id"
@@ -25,72 +26,167 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#f51515"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Position :"/>
         <TextView
             style="@style/Base.TextAppearance.AppCompat.Small"
             android:id="@+id/tv_chucvu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Position"
+            android:text=" HLV"
             android:textSize="18sp"
              />
-
-        <TextView
-            style="@style/Base.TextAppearance.AppCompat.Small"
-            android:id="@+id/tv_ten"
-            android:layout_width="match_parent"
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textSize="18sp" />
-
-        <TextView
-            style="@style/Base.TextAppearance.AppCompat.Small"
-            android:id="@+id/tv_tuoi"
-            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#f51515"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name :"/>
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/tv_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Khai Le"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Age"
-            android:textSize="18dp" />
-
-        <TextView
-
-            style="@style/Base.TextAppearance.AppCompat.Small"
-            android:id="@+id/tv_ngaysinh"
-            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#f51515"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age :"/>
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/tv_tuoi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 19"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Year of Birth"
-            android:textSize="18dp" />
-
-        <TextView
-            style="@style/Base.TextAppearance.AppCompat.Small"
-            android:id="@+id/tv_luong"
-            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#f51515"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date :"/>
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/tv_ngaysinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 16/02/1999"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Salary"
-            android:textSize="18sp"
-             />
-
-        <TextView
-            style="@style/Base.TextAppearance.AppCompat.Small"
-            android:id="@+id/tv_gioitinh"
-            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#f51515"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salary :"/>
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/tv_luong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 3000000"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gender"
-            android:textSize="18dp" />
-
-        <TextView
-            style="@style/Base.TextAppearance.AppCompat.Small"
-            android:id="@+id/tv_tinhtrang"
-            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#f51515"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender :"/>
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/tv_gioitinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Men"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Status"
-            android:textSize="18dp" />
-
-        <TextView
-            style="@style/Base.TextAppearance.AppCompat.Small"
-            android:id="@+id/tv_quoctich"
-            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#f51515"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status :"/>
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/tv_tinhtrang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" FA"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="National"
-            android:textSize="18dp" />
+            android:orientation="horizontal">
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#f51515"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Position :"/>
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/tv_quoctich"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Viet Nam"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
     </LinearLayout>
 
     <ImageView

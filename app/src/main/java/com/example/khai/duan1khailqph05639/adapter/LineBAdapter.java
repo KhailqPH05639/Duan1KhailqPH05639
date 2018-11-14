@@ -85,10 +85,10 @@ public class LineBAdapter extends BaseAdapter {
         LineB _entry = arrLineB.get( position );
         holer.tv_id.setText( _entry.getId() );
 
-        holer.tv_vitri.setText(  "Position: "+_entry.getVitri() );
-        holer.tv_ten.setText( "Name: "+ _entry.getTen() );
-        holer.tv_soao.setText( "Shirt Number: "+ _entry.getSoao() + "" );
-        holer.tv_chiso.setText( "Only: "+ _entry.getChiso() + "" );
+        holer.tv_vitri.setText(  _entry.getVitri() );
+        holer.tv_ten.setText(  _entry.getTen() );
+        holer.tv_soao.setText(  _entry.getSoao() + "" );
+        holer.tv_chiso.setText(  _entry.getChiso() + "" );
         holer.img_delete.setImageResource( R.drawable.cancel );
         return convertView;
     }
