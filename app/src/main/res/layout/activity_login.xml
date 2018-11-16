@@ -108,7 +108,7 @@
       android:layout_height="wrap_content"
       android:layout_below="@id/linearLayout"
       android:id="@+id/check"
-      android:textSize="16sp"
+      android:textSize="14sp"
       android:text="Remember Password ?"/>
     <Button
         android:fontFamily="Roboto-Regular.ttf"
@@ -116,9 +116,10 @@
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
        android:layout_below="@id/check"
-        android:layout_width="185dp"
-        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
         android:text="LOGIN"
+        android:textSize="14sp"
         android:id="@+id/btnlogin"
         android:textColor="#fff"
         android:background="@drawable/buton"/>

@@ -53,7 +53,7 @@ public class DanhsachDao {
 
     public int updateDanhsach(String id, String chucvu, String ten, int tuoi, Date ngaysinh, double luong, String gioitinh, String tinhtrang, String quoctich) {
         ContentValues values = new ContentValues();
-        values.put( "id", id  );
+        values.put( "id", id );
         values.put( "chucvu", chucvu );
         values.put( "ten", ten );
         values.put( "tuoi", tuoi );
@@ -98,6 +98,31 @@ public class DanhsachDao {
         }
         cursor.close();
         return dsDanhSach;
+    }
+
+    public int getSothanhvien() {
+        int so = 0;
+        String sql = "SELECT COUNT(id) from DanhSach";
+        Cursor cursor = db.rawQuery( sql, null );
+        cursor.moveToFirst();
+        while (cursor.isAfterLast() == false) {
+            so = cursor.getInt( 0 );
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return so;
+    }
+    public  double getgiatri(){
+        double giatri=0;
+        String sql="SELECT SUM(luong) from DanhSach";
+        Cursor cursor = db.rawQuery( sql, null );
+        cursor.moveToFirst();
+        while (cursor.isAfterLast() == false) {
+            giatri=cursor.getDouble( 0 );
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return giatri;
     }
 
 

@@ -17,10 +17,10 @@
             android:icon="@drawable/ic_danhsach"
             android:title="Members list
 " />
-        <!--<item-->
-            <!--android:id="@+id/nav_manage"-->
-            <!--android:icon="@drawable/ic_thongke"-->
-            <!--android:title="Statistical" />-->
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_thongke"
+            android:title="Statistical" />
     </group>
 
     <item android:title="Team">

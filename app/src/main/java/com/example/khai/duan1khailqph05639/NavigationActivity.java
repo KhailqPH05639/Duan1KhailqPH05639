@@ -100,10 +100,10 @@ public class NavigationActivity extends AppCompatActivity
             Intent intent= new Intent( NavigationActivity.this,DanhsachActivity.class );
             startActivity( intent );
 
-//        } else if (id == R.id.nav_manage) {
-//
-//            Intent intent= new Intent( NavigationActivity.this,ThongkeActivity.class );
-//            startActivity( intent );
+        } else if (id == R.id.nav_manage) {
+
+            Intent intent= new Intent( NavigationActivity.this,ThongkeActivity.class );
+            startActivity( intent );
 
         } else if (id == R.id.nav_share) {
 
