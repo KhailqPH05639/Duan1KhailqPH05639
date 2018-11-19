@@ -91,7 +91,7 @@ public class DanhsachAdapter extends BaseAdapter {
         holer.tv_ten.setText( _entry.getTen() );
         holer.tv_tuoi.setText(_entry.getTuoi() + "" );
         holer.tv_ngaysinh.setText( sdf.format( _entry.getDate() ) );
-        holer.tv_luong.setText(_entry.getLuong() + "" );
+        holer.tv_luong.setText(_entry.getLuong() + " $ " );
         holer.tv_gioitinh.setText(_entry.getGioitinh() );
         holer.tv_tinhtrang.setText(_entry.getTinhtrang() );
         holer.tv_quoctich.setText( _entry.getQuoctich() );
