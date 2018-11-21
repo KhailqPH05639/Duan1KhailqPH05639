@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.khai.duan1khailqph05639">
+    package="com.vn.khai.duan1khailqph05639">
 
     <application
         android:allowBackup="true"
@@ -8,26 +8,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelloActivity">
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.HelloActivity"
+
+           >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.MainActivity" />
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.LoginActivity" />
         <activity
-            android:name=".NavigationActivity"
+            android:name="com.vn.khai.duan1khailqph05639.activity.NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme" />
-        <activity android:name=".GioithieuActivity" />
-        <activity android:name=".DanhsachActivity" />
-        <activity android:name=".LineaActivity" />
-        <activity android:name=".LinebActivity" />
-        <activity android:name=".ThanhtichActivity" />
-        <activity android:name=".ThongkeActivity"></activity>
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.GioithieuActivity" />
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.DanhsachActivity" />
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.LineaActivity" />
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.LinebActivity" />
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.ThanhtichActivity" />
+        <activity android:name="com.vn.khai.duan1khailqph05639.activity.ThongkeActivity"></activity>
     </application>
 
 </manifest>

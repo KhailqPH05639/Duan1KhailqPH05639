@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".ThongkeActivity">
+    tools:context=".activity.ThongkeActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
