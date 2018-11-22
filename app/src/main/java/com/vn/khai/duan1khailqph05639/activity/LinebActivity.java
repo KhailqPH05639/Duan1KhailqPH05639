@@ -24,6 +24,7 @@ import com.vn.khai.duan1khailqph05639.adapter.LineBAdapter;
 
 import com.vn.khai.duan1khailqph05639.dao.LineBdao;
 import com.vn.khai.duan1khailqph05639.model.LineB;
+import com.vn.khai.duan1khailqph05639.sqlite.SqliteHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +56,7 @@ public class LinebActivity extends AppCompatActivity {
         btnback = (ImageView) findViewById( R.id.btnback );
         lvEmployee = (ListView) findViewById( R.id.lv_Employee );
 
-        lineBdao = new LineBdao( LinebActivity.this );
+        lineBdao = new LineBdao( new SqliteHelper( getApplicationContext() ) );
         adapter = new LineBAdapter( LinebActivity.this, dsLineB );
         lvEmployee.setAdapter( adapter );
         dsLineB = lineBdao.getAllLineB();
@@ -94,7 +95,7 @@ public class LinebActivity extends AppCompatActivity {
                 mBuilder.setPositiveButton( "Update", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        lineBdao = new LineBdao( LinebActivity.this );
+                        lineBdao = new LineBdao( new SqliteHelper( getApplicationContext() ));
                         lineBdao.updateLineB( edid.getText().toString(), edvitri.getText().toString(), edten.getText().toString(), Integer.parseInt( edsooao.getText().toString() ), Integer.parseInt( edchiso.getText().toString() ) );
                         dsLineB.clear();
                         dsLineB = lineBdao.getAllLineB();
@@ -136,7 +137,7 @@ public class LinebActivity extends AppCompatActivity {
         builder.setPositiveButton( "Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                lineBdao = new LineBdao( getApplicationContext() );
+                lineBdao = new LineBdao( new SqliteHelper( getApplicationContext() ));
                 if (validation() > 0) {
                     LineB lineB = new LineB( edid.getText().toString(), edvitri.getText().toString(), edten.getText().toString(), Integer.parseInt( edsooao.getText().toString() ), Integer.parseInt( edchiso.getText().toString() ) );
                     lineBdao.insertLineB( lineB );

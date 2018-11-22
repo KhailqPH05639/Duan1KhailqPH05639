@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.vn.khai.duan1khailqph05639.R;
 import com.vn.khai.duan1khailqph05639.dao.DanhsachDao;
+import com.vn.khai.duan1khailqph05639.sqlite.SqliteHelper;
 
 public class ThongkeActivity extends AppCompatActivity {
     private TextView tvThongke;
@@ -22,7 +23,7 @@ public class ThongkeActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_thongke );
         tvThongke = (TextView) findViewById(R.id.tv_thongke);
-        danhsachDao=new DanhsachDao( ThongkeActivity.this);
+        danhsachDao=new DanhsachDao( new SqliteHelper( getApplicationContext() ) );
         tvGiatri = (TextView) findViewById(R.id.tv_giatri);
         tvThongke.setText( danhsachDao.getSothanhvien() +"");
         tvGiatri.setText( danhsachDao.getgiatri()+" $" );

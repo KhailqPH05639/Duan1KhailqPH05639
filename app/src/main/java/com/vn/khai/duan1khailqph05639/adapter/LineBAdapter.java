@@ -13,6 +13,7 @@ import com.vn.khai.duan1khailqph05639.R;
 
 import com.vn.khai.duan1khailqph05639.dao.LineBdao;
 import com.vn.khai.duan1khailqph05639.model.LineB;
+import com.vn.khai.duan1khailqph05639.sqlite.SqliteHelper;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class LineBAdapter extends BaseAdapter {
         this.context = context;
         this.arrLineB = arrLineB;
         this.inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
-        lineBdao = new LineBdao( context );
+        lineBdao = new LineBdao( new SqliteHelper( context ) );
 
     }
 
@@ -74,7 +75,7 @@ public class LineBAdapter extends BaseAdapter {
             holer.img_delete.setOnClickListener( new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    lineBdao.deleteLineBByID( arrLineB.get( position ).getId() );
+                    lineBdao.deleteLineB( arrLineB.get( position ).getId() );
                     arrLineB.remove( position );
                     notifyDataSetChanged();
                 }

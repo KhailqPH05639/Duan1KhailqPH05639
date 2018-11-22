@@ -26,6 +26,7 @@ import com.vn.khai.duan1khailqph05639.R;
 import com.vn.khai.duan1khailqph05639.adapter.DanhsachAdapter;
 import com.vn.khai.duan1khailqph05639.dao.DanhsachDao;
 import com.vn.khai.duan1khailqph05639.model.Danhsach;
+import com.vn.khai.duan1khailqph05639.sqlite.SqliteHelper;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -67,7 +68,7 @@ public class DanhsachActivity extends AppCompatActivity {
         btnback = (ImageView) findViewById( R.id.btnback );
         lvEmployee = (ListView) findViewById( R.id.lv_Employee );
 
-        danhsachDao = new DanhsachDao( DanhsachActivity.this );
+        danhsachDao = new DanhsachDao(new SqliteHelper( getApplicationContext() ) );
         adapter = new DanhsachAdapter( DanhsachActivity.this, dsDanhSach );
         lvEmployee.setAdapter( adapter );
         try {
@@ -136,10 +137,9 @@ public class DanhsachActivity extends AppCompatActivity {
                 mBuilder.setPositiveButton( "Update", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        danhsachDao=new DanhsachDao( DanhsachActivity.this );
+                        danhsachDao=new DanhsachDao( new SqliteHelper( getApplicationContext() ) );
                         try {
-                            danhsachDao.updateDanhsach( edId.getText().toString(),edChucvu.getText().toString(),edTen.getText().toString(),Integer.parseInt(edTuoi.getText().toString()),sdf.parse( edNamsinh.getText().toString() ),Double.parseDouble( edLuong.getText().toString() ),edGioitinh.getText().toString(),edStatus.getText().toString(),edQuoctich.getText().toString() );
-                            dsDanhSach.clear();
+                            danhsachDao.updateDanhSach( edId.getText().toString(),edChucvu.getText().toString(),edTen.getText().toString(),Integer.parseInt( edTuoi.getText().toString() ),sdf.parse( edNamsinh.getText().toString() ),Double.parseDouble( edLuong.getText().toString() ),edGioitinh.getText().toString(),edStatus.getText().toString(),edQuoctich.getText().toString());
                             dsDanhSach=danhsachDao.getAllDanhSach();
                             adapter.changeDataset( dsDanhSach );
                             Toast.makeText( DanhsachActivity.this, "Update successfully", Toast.LENGTH_SHORT ).show();
@@ -210,7 +210,7 @@ public class DanhsachActivity extends AppCompatActivity {
         builder.setPositiveButton( "Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                danhsachDao = new DanhsachDao( getApplicationContext() );
+                danhsachDao = new DanhsachDao( new SqliteHelper( getApplicationContext() ) );
                 try {
                     if (validation() > 0) {
                         Danhsach danhsach = new Danhsach( edId.getText().toString(), edChucvu.getText().toString(), edTen.getText().toString(), edGioitinh.getText().toString(), edStatus.getText().toString(), edQuoctich.getText().toString(), Integer.parseInt( edTuoi.getText().toString() ), Double.parseDouble( edLuong.getText().toString() ), sdf.parse( edNamsinh.getText().toString() ) );

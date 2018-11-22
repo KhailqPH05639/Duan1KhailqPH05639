@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.vn.khai.duan1khailqph05639.R;
 import com.vn.khai.duan1khailqph05639.dao.DanhsachDao;
 import com.vn.khai.duan1khailqph05639.model.Danhsach;
+import com.vn.khai.duan1khailqph05639.sqlite.SqliteHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -28,7 +29,7 @@ public class DanhsachAdapter extends BaseAdapter {
         this.context = context;
         this.arrDanhsach = arrDanhsach;
         this.inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
-        danhsachDao = new DanhsachDao( context );
+        danhsachDao = new DanhsachDao( new SqliteHelper( context ) );
 
     }
 
@@ -74,7 +75,7 @@ public class DanhsachAdapter extends BaseAdapter {
             holer.img_delete.setOnClickListener( new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    danhsachDao.deleteDanhSachByID( arrDanhsach.get( position ).getId() );
+                    danhsachDao.deleteDanhSach( arrDanhsach.get( position ).getId() );
                     arrDanhsach.remove( position );
                     notifyDataSetChanged();
                 }
