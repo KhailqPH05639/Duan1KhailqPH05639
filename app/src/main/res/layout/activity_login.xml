@@ -113,20 +113,21 @@
 
       android:textSize="14sp"
       android:text="Remember Password ?"/>
-    <Button
-        android:fontFamily="Roboto-Regular.ttf"
-        style="@style/Base.TextAppearance.AppCompat.Small"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
-       android:layout_below="@id/check"
-        android:layout_width="210dp"
-        android:layout_height="55dp"
-        android:text="LOGIN"
-        android:textSize="14sp"
-        android:textAllCaps="false"
-        android:id="@+id/btnlogin"
-        android:textColor="#fff"
-        android:background="@drawable/buton"/>
+
+            <Button
+                android:id="@+id/btnlogin"
+
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/buton"
+                android:fontFamily="Roboto-Regular.ttf"
+                android:text="LOGIN"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14sp" />
 
         </RelativeLayout>
     </ScrollView>
