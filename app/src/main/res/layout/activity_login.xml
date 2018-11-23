@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="20dp"
 
-                android:hint="User Name"
+                android:hint="Username"
                 android:imeOptions="actionNext"
                 android:paddingTop="10dp"
                 android:text="admin"
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="20dp"
 
-                android:hint="Pass Word"
+                android:hint="Password"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:paddingTop="10dp"
