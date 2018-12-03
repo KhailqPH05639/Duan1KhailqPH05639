@@ -7,20 +7,23 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_intro"
-            android:title="Introduce" />
+            android:title="Introduce"
+            android:fontFamily="Roboto-Regular.ttf"/>
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_thanhtich"
-            android:title="Team achievements" />
+            android:title="Team achievements"
+            android:fontFamily="Roboto-Regular.ttf"/>
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_danhsach"
-            android:title="Members list
-" />
+            android:title="Members list"
+            android:fontFamily="Roboto-Regular.ttf"/>
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_thongke"
-            android:title="Statistical" />
+            android:title="Statistical"
+            android:fontFamily="Roboto-Regular.ttf"/>
     </group>
 
     <item android:title="Team">
@@ -28,11 +31,13 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_linea"
-                android:title="Line A" />
+                android:title="Line A"
+                android:fontFamily="Roboto-Regular.ttf"/>
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_lineb"
-                android:title="Line B" />
+                android:title="Line B"
+                android:fontFamily="Roboto-Regular.ttf"/>
         </menu>
     </item>
 
