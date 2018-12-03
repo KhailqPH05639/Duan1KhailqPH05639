@@ -176,7 +176,7 @@
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Position :"/>
+                android:text="National :"/>
             <TextView
                 style="@style/Base.TextAppearance.AppCompat.Small"
                 android:id="@+id/tv_quoctich"
